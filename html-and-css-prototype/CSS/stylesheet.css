@@ -41,12 +41,7 @@ h1 {
 
 /* Your CSS code goes here */
 
-main {
-	font-family: "rooney-sans", Avenir-Book, Calibri, sans-serif;
-}
-
 h1 {
-	font-family: "rooney-web", "AmericanTypewriter", Rockwell, serif; /*TODO: import Rooney fonts*/
 	text-align: center;
 }
 
@@ -59,6 +54,16 @@ h1 {
 	padding: .75em;
 	text-align: center;
 	font-size: 13px;
+}
+
+.triangle{ /*Technique taken from: https://css-tricks.com/the-shapes-of-css/ */
+	margin: auto;
+	border-top: 5px solid #424242;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	width: 0;
+	margin-right: 45%;
 }
 
 .donationBarContainer{
@@ -88,6 +93,7 @@ h1 {
 	grid-template-columns: 50% 50%; /*When used with padding, the fr unit chops off of the last one. I know that can be overcome, but don't remember how off the top of my head.*/
 	font-size: 13px;
 	padding: 1em 2em;
+	justify-content: space-around;
 }
 
 .boxText {
@@ -103,24 +109,31 @@ h1 {
 .inputWrapper {
 	grid-row: 2 / span 1;
 	grid-column: 1 / span 1;
-	border: 2px solid #EAEAEA;
 	border-radius: 2px;
+	margin-right: 1em;
+
 }
 
 .inputWrapper::before {
 	content: "$";
-	color: #777;
-	font-size: 14px;
+	color: #8F8F8F;
+	font-size: 18px;
 	font-weight: bold;
 	position: absolute;
-	margin-top: .75em;
+	margin-top: .65em;
 	margin-left: .5em;
 }
 
 .inputWrapper input {
-	padding: 1em;
-	border: 0;
+	padding: 14px;
+	padding-left: 20px;
+	border: 2px solid #EAEAEA;
+	border-radius: 2px;
+	width: 95px;
+	font-size: 14px;
+	font-weight: bold;
 }
+
 .donationBoxContainer button {
 	background-color: #1CBC2C;
 	color: white;
@@ -130,14 +143,15 @@ h1 {
 	grid-row: 2 / span 1;
 	grid-column: 2 / span 1;
 	padding: 1em;
-	margin: auto -.75em auto 1em;
 	font-size: 14px;
+	margin: auto -1em auto .5em;
 }
 
 .donationBoxContainer a {
 	color: #20A1D4;
 	font-style: italic;
 	text-decoration: none;
+	margin-top: 4px;
 }
 
 .buttonContainer {
